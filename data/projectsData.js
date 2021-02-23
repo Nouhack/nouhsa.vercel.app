@@ -8,9 +8,17 @@ export const dumData = [
   },
 
   {
+    title: "my personal portfolio",
+    body:
+      "  this is my personal portfolio created with Next.js and chakra-ui for styling and it's responsive for all devices.  .",
+    technology: "next JS",
+    githubLink: "https://github.com/Nouhack/github_auth_db_session_stored",
+  },
+
+  {
     title: "session authentication for github provider",
     body:
-      " This project is a Session Based Authentication implementation for Next.js app using nextAuth solution for Github provider and uses Prisma ORM to deal with the sqlite database , the session and users accounts are stored in a database and makes it easy to end user's session and it's more secure. .",
+      " This project is a Session Based Authentication implementation for Next.js app using nextAuth solution for Github provider and uses Prisma ORM to deal with the sqlite database , the session and users accounts are stored in a database and makes it easy to end user's session and it's more secure .",
     technology: "next JS",
     githubLink: "https://github.com/Nouhack/github_auth_db_session_stored",
   },
