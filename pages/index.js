@@ -100,7 +100,7 @@ export default function Home() {
                 />
               </Tooltip>
 
-              <Tooltip label="Download My resume" fontSize="md">
+              <Tooltip label="View My resume" fontSize="md">
                 <IconButton
                   as="a"
                   target="_blank"

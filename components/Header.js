@@ -9,19 +9,16 @@ import {
   Text,
   useColorMode,
   useDisclosure,
+  Box,
 } from "@chakra-ui/react";
-import {
-  StarIcon,
-  HamburgerIcon,
-  CloseIcon,
-  SunIcon,
-  MoonIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
+
   return (
     <>
       <Flex bg="transparent" h="12vh">
@@ -85,9 +82,7 @@ export default function Header() {
             p="6"
             // color="black"
             borderRadius="20px"
-            icon={
-              isOpen ? <CloseIcon w={4} h={4} /> : <HamburgerIcon w={6} h={6} />
-            }
+            icon={isOpen ? null : <HamburgerIcon w={6} h={6} />}
           />
         </Center>
       </Flex>
@@ -95,46 +90,51 @@ export default function Header() {
           top="12vh"*/}
 
       <Slide direction="bottom" bg="red" in={isOpen} style={{ zIndex: 10 }}>
-        <Center
-          bg="rgba(0, 0, 0, 0.60)"
+        <Box
           w="100%"
-          h="88vh"
-          display={{ base: "flex", lg: "none" }}
+          h="100vh"
+          bg="rgba(0, 0, 0, 0.60)"
+          display={{ base: "block", lg: "none" }}
         >
-          <Stack direction="column" spacing="25px" p="20" w="100%">
-            <Link href="/">
-              <Button
-                colorScheme="transparent"
-                onClick={onToggle}
-                color="white"
-                _focus={{ outline: "none" }} //colorScheme="white"
-              >
-                About
-              </Button>
-            </Link>
+          <Flex width="100%" justifyContent="center" p={10}>
+            <CloseIcon w={4} h={4} onClick={onToggle} />
+          </Flex>
+          <Center w="100%" h="100%">
+            <Stack direction="column" spacing="25px" p="20" w="100%">
+              <Link href="/">
+                <Button
+                  colorScheme="transparent"
+                  onClick={onToggle}
+                  color="white"
+                  _focus={{ outline: "none" }} //colorScheme="white"
+                >
+                  About
+                </Button>
+              </Link>
 
-            <Link href="/career">
-              <Button
-                onClick={onToggle}
-                colorScheme="transparent"
-                color="white"
-                _focus={{ outline: "none" }} //colorScheme="white"
-              >
-                Career
-              </Button>
-            </Link>
-            <Link href="/projects">
-              <Button
-                onClick={onToggle}
-                colorScheme="transparent"
-                color="white"
-                _focus={{ outline: "none" }} //colorScheme="white"
-              >
-                Projects
-              </Button>
-            </Link>
-          </Stack>
-        </Center>
+              <Link href="/career">
+                <Button
+                  onClick={onToggle}
+                  colorScheme="transparent"
+                  color="white"
+                  _focus={{ outline: "none" }} //colorScheme="white"
+                >
+                  Career
+                </Button>
+              </Link>
+              <Link href="/projects">
+                <Button
+                  onClick={onToggle}
+                  colorScheme="transparent"
+                  color="white"
+                  _focus={{ outline: "none" }} //colorScheme="white"
+                >
+                  Projects
+                </Button>
+              </Link>
+            </Stack>
+          </Center>
+        </Box>
       </Slide>
     </>
   );
