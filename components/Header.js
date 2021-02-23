@@ -92,14 +92,16 @@ export default function Header() {
       <Slide direction="bottom" bg="red" in={isOpen} style={{ zIndex: 10 }}>
         <Box
           w="100%"
-          h="100vh"
+          h="100%"
           bg="rgba(0, 0, 0, 0.60)"
           display={{ base: "block", lg: "none" }}
         >
-          <Flex width="100%" justifyContent="center" p={10}>
-            <CloseIcon w={4} h={4} onClick={onToggle} />
+          <Flex width="100%" h="20vh" justifyContent="center" p={10}>
+            <Button onClick={onToggle} bg="transparent">
+              <CloseIcon w={4} h={4} />
+            </Button>
           </Flex>
-          <Center w="100%" h="100%">
+          <Center w="100%" h="80vh">
             <Stack direction="column" spacing="25px" p="20" w="100%">
               <Link href="/">
                 <Button
