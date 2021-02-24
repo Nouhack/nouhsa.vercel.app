@@ -94,11 +94,11 @@ export default function Header() {
           w="100%"
           h="100%"
           bg="rgba(0, 0, 0, 0.60)"
-          display={{ base: "block", lg: "none" }}
+          display={{ base: "inherit", lg: "none" }}
         >
           <Flex width="100%" h="20vh" justifyContent="center" p={10}>
             <Button onClick={onToggle} bg="transparent">
-              <CloseIcon w={4} h={4} />
+              <CloseIcon w={4} h={4} color="white" />
             </Button>
           </Flex>
           <Center w="100%" h="80vh">
