@@ -9,6 +9,7 @@ import {
   Text,
   HStack,
   IconButton,
+  useToast,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
@@ -18,6 +19,7 @@ import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
 
 export default function Home() {
+  const toast = useToast();
   return (
     <>
       <Head>
@@ -91,14 +93,23 @@ export default function Home() {
                 fontSize="20px"
                 icon={<IoLogoTwitter />}
               />
-              <Tooltip label="Send to : nouh.saiche@gmail.com" fontSize="md">
-                <IconButton
-                  variant="outline"
-                  aria-label="Call Sage"
-                  fontSize="20px"
-                  icon={<SiGmail />}
-                />
-              </Tooltip>
+              <IconButton
+                variant="outline"
+                aria-label="Call Sage"
+                fontSize="20px"
+                icon={<SiGmail />}
+                onClick={() =>
+                  toast({
+                    position: "top",
+                    title: "Contact me.",
+                    description: "nouh.saiche@gmail.com",
+                    status: "info",
+                    bg: "red",
+                    duration: 9000,
+                    isClosable: true,
+                  })
+                }
+              />
 
               <Tooltip label="View My resume" fontSize="md">
                 <IconButton
