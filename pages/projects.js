@@ -12,8 +12,13 @@ import {
   Spacer,
   Container,
   Button,
+  ListIcon,
+  ListItem,
+  List,
+  HStack,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
+import { RiGitRepositoryLine } from "react-icons/ri";
 import { useState } from "react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { dumData } from "../data/projectsData";
@@ -54,7 +59,17 @@ export default function career() {
                     <Stack direction="column" spacing={3}>
                       <Stack direction={{ base: "column", md: "row" }}>
                         <Box w={{ base: "100%", md: "80%" }}>
-                          <Text fontSize="xl">{it.title}</Text>
+                          <List spacing={3}>
+                            <ListItem>
+                              <Text>
+                                <ListIcon
+                                  as={RiGitRepositoryLine}
+                                  color="green.500"
+                                />
+                                {it.title}
+                              </Text>
+                            </ListItem>
+                          </List>
                         </Box>
                         <Spacer display={{ base: "none", md: null }} />
                         <Flex

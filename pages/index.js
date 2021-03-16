@@ -29,10 +29,14 @@ export default function Home() {
       <Stack h="88vh" direction={["column", "column", "row"]} spacing="10px">
         <Center w={{ base: "100%", md: "40%" }} h="100%">
           <Box
-            boxShadow="xl"
+            boxShadow="dark-lg"
             w={300}
             h={300}
             borderRadius="xl"
+            rounded="100%"
+            // roundedTopEnd={50}
+            roundedBottomStart={30}
+            // roundedTopEnd={300}
             overflow="hidden"
           >
             <Image
@@ -58,16 +62,17 @@ export default function Home() {
               mt={{ base: "20px", md: null }}
               fontSize={["20px", "23px", "26px", "40px"]}
               mr="10px"
+              textShadow="3px 3px #9c9c9c"
             >
               Hey, I’m Saiche Nouh
             </Heading>
             <Text fontSize="md" fontFamily="mono">
-              Hi my name is Nouh Saiche, from Algeria exactly Living in Algiers
-              I am a FullStack React self taught developer and also react native
-              mobile developer, I'am obsessed with learning new things every day
-              , I like to take on challenges and developing things is my hobby
-              for all time and my dream is to join a company to face more
-              challenges and improve my skills .
+              Hi my name is Nouh Saiche, from Algeria I'am a React FullStack
+              developer I'am obsessed with learning new things every day and
+              developing apps is my hobby , my motto is{" "}
+              <Text textShadow="1px 2px #9c9c9c">
+                clean code clean design .
+              </Text>{" "}
             </Text>
             <HStack
               align="center"

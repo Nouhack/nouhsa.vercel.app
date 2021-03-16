@@ -10,6 +10,7 @@ import {
   useColorMode,
   useDisclosure,
   Box,
+  Badge,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useState } from "react";
@@ -38,6 +39,21 @@ export default function Header() {
           //  bg="red"
         >
           <Stack direction="row" spacing="10px">
+            <Link href="/skills">
+              <Button
+                size="sm"
+                bg="transparent"
+                _focus={{ outline: "none" }} //colorScheme="white"
+
+                //  color="black"
+              >
+                <Text>Skills </Text>
+                <Badge colorScheme="purple" ml={1}>
+                  New
+                </Badge>
+              </Button>
+            </Link>
+
             <Link href="/projects">
               <Button
                 size="sm"
@@ -132,6 +148,20 @@ export default function Header() {
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
                   Projects
+                </Button>
+              </Link>
+
+              <Link href="/skills">
+                <Button
+                  onClick={onToggle}
+                  colorScheme="transparent"
+                  color="white"
+                  _focus={{ outline: "none" }} //colorScheme="white"
+                >
+                  Skills
+                  <Badge colorScheme="purple" ml={1}>
+                    New
+                  </Badge>
                 </Button>
               </Link>
             </Stack>
