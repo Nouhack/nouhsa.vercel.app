@@ -15,11 +15,21 @@ import { AiFillGithub } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
 import { SiGmail } from "react-icons/si";
 import { BsDownload } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 import Image from "next/image";
 
+import {
+  arabicIntroduction,
+  englishIntroduction,
+  arabicIntroTitle,
+  englishIntroTitle,
+} from "../data/DeveloperIntroduction";
+
 export default function Home() {
   const toast = useToast();
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -33,9 +43,9 @@ export default function Home() {
             w={300}
             h={300}
             borderRadius="xl"
-            rounded="100%"
+            rounded="10%"
             // roundedTopEnd={50}
-            roundedBottomStart={30}
+            //  roundedBottomStart={30}
             // roundedTopEnd={300}
             overflow="hidden"
           >
@@ -64,15 +74,17 @@ export default function Home() {
               mr="10px"
               textShadow="3px 3px #9c9c9c"
             >
-              Hey, I’m Saiche Nouh
+              {router.locale === "en-US" ? englishIntroTitle : arabicIntroTitle}
             </Heading>
             <Text fontSize="md" fontFamily="mono">
-              Hi my name is Nouh Saiche, from Algeria I'am a React FullStack
-              developer I'am obsessed with learning new things every day and
-              developing apps is my hobby , my motto is{" "}
-              <Text textShadow="1px 2px #9c9c9c">
-                clean code clean design .
-              </Text>{" "}
+              {router.locale === "en-US"
+                ? englishIntroduction
+                : arabicIntroduction}
+              {router.locale === "en-US" && (
+                <Text textShadow="1px 2px #9c9c9c">
+                  clean code clean design .
+                </Text>
+              )}
             </Text>
             <HStack
               align="center"

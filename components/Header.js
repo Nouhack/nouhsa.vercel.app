@@ -11,14 +11,36 @@ import {
   useDisclosure,
   Box,
   Badge,
+  Switch,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+
+import { useRouter } from "next/router";
+
+import {
+  arAbout,
+  enAbout,
+  arCareer,
+  enCareer,
+  arProjects,
+  enProjects,
+  arSkills,
+  enSkills,
+} from "../data/Titles";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
+  const [localValue, setlocalValue] = useState("en-US");
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push(router.pathname, router.pathname, {
+      locale: localValue,
+    });
+  }, [localValue]);
 
   return (
     <>
@@ -29,9 +51,22 @@ export default function Header() {
           ) : (
             <SunIcon onClick={toggleColorMode} />
           )}
+          <Center ml="30px" mt="5px">
+            <Text mr="5px">en</Text>
+            <Switch
+              size="md"
+              colorScheme="none"
+              onChange={(event) => {
+                localValue === "en-US"
+                  ? setlocalValue("ar-DZ")
+                  : setlocalValue("en-US");
+                console.log(router.pathname);
+              }}
+            />
+            <Text ml="5px">ar</Text>
+          </Center>
         </Center>
         <Spacer />
-
         <Center
           p="5"
           h="100%"
@@ -47,9 +82,9 @@ export default function Header() {
 
                 //  color="black"
               >
-                <Text>Skills </Text>
+                <Text>{router.locale === "en-US" ? enSkills : arSkills} </Text>
                 <Badge colorScheme="purple" ml={1}>
-                  New
+                  {router.locale === "en-US" ? "new" : "جديد"}
                 </Badge>
               </Button>
             </Link>
@@ -62,7 +97,9 @@ export default function Header() {
 
                 //  color="black"
               >
-                <Text>Projects</Text>
+                <Text>
+                  {router.locale === "en-US" ? enProjects : arProjects}
+                </Text>
               </Button>
             </Link>
 
@@ -74,7 +111,7 @@ export default function Header() {
 
                 //    color="black"
               >
-                <Text>Career</Text>
+                <Text>{router.locale === "en-US" ? enCareer : arCareer}</Text>
               </Button>
             </Link>
             <Link href="/">
@@ -83,12 +120,12 @@ export default function Header() {
                 ///   colorScheme="twitter"
                 _focus={{ outline: "none" }} //colorScheme="white"
               >
-                <Text>About</Text>
+                <Text>{router.locale === "en-US" ? enAbout : arAbout}</Text>
               </Button>
             </Link>
           </Stack>
         </Center>
-
+        {/*  ----------------------- mobile header ---------------------------*/}
         <Center p="5" display={{ base: "inherit", lg: "none" }}>
           <IconButton
             onClick={onToggle}
@@ -126,7 +163,7 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  About
+                  {router.locale === "en-US" ? enAbout : arAbout}
                 </Button>
               </Link>
 
@@ -137,7 +174,7 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  Career
+                  {router.locale === "en-US" ? enCareer : arCareer}
                 </Button>
               </Link>
               <Link href="/projects">
@@ -147,7 +184,7 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  Projects
+                  {router.locale === "en-US" ? enProjects : arProjects}
                 </Button>
               </Link>
 
@@ -158,9 +195,9 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  Skills
+                  {router.locale === "en-US" ? enSkills : arSkills}
                   <Badge colorScheme="purple" ml={1}>
-                    New
+                    {router.locale === "en-US" ? "new" : "جديد"}
                   </Badge>
                 </Button>
               </Link>

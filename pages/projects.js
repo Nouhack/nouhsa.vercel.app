@@ -22,10 +22,13 @@ import { RiGitRepositoryLine } from "react-icons/ri";
 import { useState } from "react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { dumData } from "../data/projectsData";
+import { useRouter } from "next/router";
 
 export default function career() {
   const [data, setdata] = useState(dumData);
   const [searchField, setsearchField] = useState("");
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -37,7 +40,9 @@ export default function career() {
             <InputGroup size="md" w={{ base: "100%", md: "50%" }} mt={20}>
               <Input
                 //
-                placeholder="Search project"
+                placeholder={
+                  router.locale === "en-US" ? "Search project" : "ابحث عن مشروع"
+                }
                 size="md"
                 onChange={(e) => setsearchField(e.target.value)}
               />
@@ -51,7 +56,9 @@ export default function career() {
             {/* ========== */}
             {data
               .filter((item, key) => {
-                return item.title.includes(searchField);
+                return router.locale === "en-US"
+                  ? item.title.includes(searchField)
+                  : item.atTitle.includes(searchField);
               })
               .map((it) => {
                 return (
@@ -66,7 +73,9 @@ export default function career() {
                                   as={RiGitRepositoryLine}
                                   color="green.500"
                                 />
-                                {it.title}
+                                {router.locale === "en-US"
+                                  ? it.title
+                                  : it.atTitle}
                               </Text>
                             </ListItem>
                           </List>

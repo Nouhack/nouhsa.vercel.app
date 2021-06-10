@@ -14,7 +14,13 @@ import {
 import Head from "next/head";
 import ItemWrapper from "../components/utils/ItemWrapper";
 import { InfoIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
+
+import * as item from "../data/CareerIntroduction";
+
 export default function career() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -30,7 +36,7 @@ export default function career() {
               fontSize={["20px", "23px", "26px", "40px"]}
               mr="10px"
             >
-              Timeline
+              {router.locale === "en-US" ? item.enVarTitle : item.arVarTitle}
             </Heading>
           </Center>
           <Stack direction="row" p={4} spacing={2}>
@@ -39,73 +45,84 @@ export default function career() {
               <Text fontSize={18}>2021</Text>
               <List spacing={5} pl={10}>
                 <ItemWrapper
-                  value="Im still improving My nextJS skills as a React FullStack
-                  developer"
+                  value={
+                    router.locale === "en-US" ? item.enVar25 : item.arVar25
+                  }
                 />
 
                 <ItemWrapper
-                  value="Learn how to implement cloudinary as a third party persistent
-                  file storage service"
+                  value={
+                    router.locale === "en-US" ? item.enVar24 : item.arVar24
+                  }
                 />
                 <ItemWrapper
-                  value="Learn better way for styling components in react so i went
-                      with chakra-ui library by the way this portfolio is styled
-                      using chakra-ui"
+                  value={
+                    router.locale === "en-US" ? item.enVar23 : item.arVar23
+                  }
                 />
                 <ItemWrapper
-                  value="Learn how to implement Authentication to nextJS projects , so
-                  i did it using NextAuth Library for both JWT Auth or DataBase
-                  Session"
+                  value={
+                    router.locale === "en-US" ? item.enVar22 : item.arVar22
+                  }
                 />
-                <ItemWrapper value="Learn Prisma ORM" />
+                <ItemWrapper
+                  value={
+                    router.locale === "en-US" ? item.enVar21 : item.arVar21
+                  }
+                />
                 {/* You can also use custom icons from react-icons */}
-                <ItemWrapper value="Learn next js framwork" />
+                <ItemWrapper
+                  value={
+                    router.locale === "en-US" ? item.enVar20 : item.arVar20
+                  }
+                />
               </List>
               <Text fontSize={18}>2020</Text>
 
               <List spacing={5} pl={10}>
                 <ItemWrapper
-                  value=" Developing mobile app with react native was a nightmare for my
-                  pc because is so week 😑 6gb memory i3 2cores 😑 so i focused
-                  to improve the web side skills."
+                  value={
+                    router.locale === "en-US" ? item.enVar19 : item.arVar19
+                  }
                 />
 
                 <ItemWrapper
-                  value="Learning react js without adding react native was a waste of
-                  power for me so i jumped into react native i learned both with
-                  EXPO or with pure CLI"
+                  value={
+                    router.locale === "en-US" ? item.enVar17 : item.arVar18
+                  }
                 />
                 <ItemWrapper
-                  value="Learn how to integrade and add some backend services for my
-                  react web apps where i went with firebase"
-                />
-
-                <ItemWrapper
-                  value="I spended
-                  a lot of time learning javascript and React js library, css ,
-                  html ,bootstrap every day for almost 7 hours per day."
-                />
-                <ItemWrapper
-                  value="After my graduation i falled in love with React after reading
-                  and understanding the workflow of that library i was like damn
-                  that my future 😆."
-                />
-                <ItemWrapper
-                  value="I forgot
-                  to mention that I was a promotion major all the years and i
-                  was able to get the highest degree for my end of studies
-                  project -- where i got 17/20 points"
+                  value={
+                    router.locale === "en-US" ? item.enVar16 : item.arVar16
+                  }
                 />
 
                 <ItemWrapper
-                  value="Created end of studies project Application with java and MySQL
-                  database based on the thesis where the app was management of
-                  the documentation generation"
+                  value={
+                    router.locale === "en-US" ? item.enVar15 : item.arVar15
+                  }
+                />
+                <ItemWrapper
+                  value={
+                    router.locale === "en-US" ? item.enVar14 : item.arVar14
+                  }
+                />
+                <ItemWrapper
+                  value={
+                    router.locale === "en-US" ? item.enVar13 : item.arVar13
+                  }
                 />
 
                 <ItemWrapper
-                  value=" Created end of studies project thesis using my knowledge that
-                  i got from my last training where i uses UML for modeling"
+                  value={
+                    router.locale === "en-US" ? item.enVar12 : item.arVar12
+                  }
+                />
+
+                <ItemWrapper
+                  value={
+                    router.locale === "en-US" ? item.enVar11 : item.arVar11
+                  }
                 />
                 <ItemWrapper
                   value="This year was the turning point of my career where i done many
@@ -113,62 +130,57 @@ export default function career() {
                 />
                 {/* You can also use custom icons from react-icons */}
                 <ItemWrapper
-                  value="I
-                  attended a one-week professional training about object
-                  oriented analysis and design Using Uml at IT-COMP company"
+                  value={
+                    router.locale === "en-US" ? item.enVar10 : item.arVar10
+                  }
                 />
               </List>
               <Text fontSize={18}>2019</Text>
               <List spacing={5} pl={10}>
                 <ItemWrapper
-                  value="learning how to create desktop app using javaFx and i created
-                  some Application consuming free apis"
+                  value={router.locale === "en-US" ? item.enVar9 : item.arVar9}
                 />
                 <ItemWrapper
-                  value="2 years
-                  passed and i i'm still unstable searching my comfort area in
-                  tech and that time i choosed java SE"
+                  value={router.locale === "en-US" ? item.enVar8 : item.arVar8}
                 />
               </List>
               <Text fontSize={18}>2018</Text>
               <List spacing={3} pl={10}>
                 {/* You can also use custom icons from react-icons */}
                 <ItemWrapper
-                  value="I decided
-                  to move on and learn something heavy, i took the challenge and
-                  went with Django"
+                  value={router.locale === "en-US" ? item.enVar7 : item.arVar7}
                 />
 
                 <ItemWrapper
-                  value="I joined
-                  professional formation center and subscribe for computer
-                  science and database option specialty"
+                  value={router.locale === "en-US" ? item.enVar6 : item.arVar6}
                 />
               </List>
               <Text fontSize={18}>2017</Text>
               <List spacing={5} pl={10}>
                 <ItemWrapper
-                  value="Create some beginner Desktop Projects using Tkinter Library
-                  and kivy for mobile apps"
+                  value={router.locale === "en-US" ? item.enVar5 : item.arVar5}
                 />
 
                 {/* You can also use custom icons from react-icons */}
-                <ItemWrapper value="My self learning begin with learning python fundamentals" />
+                <ItemWrapper
+                  value={router.locale === "en-US" ? item.enVar4 : item.arVar4}
+                />
               </List>
               <Text fontSize={18}>2014 - 2017</Text>
               <List spacing={5} pl={10}>
                 <ItemWrapper
-                  value="I
-                  Abandoned université because my injury and because my
-                  université spacialité that i didn't like and it was science of
-                  matter"
+                  value={router.locale === "en-US" ? item.enVar3 : item.arVar3}
                 />
                 {/* You can also use custom icons from react-icons */}
-                <ItemWrapper value="Worst years of my life where i got sick with hernia discal" />
+                <ItemWrapper
+                  value={router.locale === "en-US" ? item.enVar2 : item.arVar2}
+                />
               </List>
               <Text fontSize={18}>2014</Text>
               <List spacing={5} pl={10}>
-                <ItemWrapper value=" Obtaining my baccalaureate Degree" />
+                <ItemWrapper
+                  value={router.locale === "en-US" ? item.enVar1 : item.arVar1}
+                />
               </List>
             </Stack>
           </Stack>
