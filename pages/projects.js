@@ -68,7 +68,14 @@ export default function career() {
                         <Box w={{ base: "100%", md: "80%" }}>
                           <List spacing={3}>
                             <ListItem>
-                              <Text>
+                              <Text
+                                fontFamily={
+                                  router.locale === "en-US"
+                                    ? "Montserrat , sans-serif"
+                                    : "Tajawal, sans-serif"
+                                }
+                                fontWeight="bold"
+                              >
                                 <ListIcon
                                   as={RiGitRepositoryLine}
                                   color="green.500"
@@ -90,7 +97,16 @@ export default function career() {
                       </Stack>
                       <Box w="90%">
                         {" "}
-                        <Text color="grey">{it.body}</Text>
+                        <Text
+                          color="grey"
+                          fontFamily={
+                            router.locale === "en-US"
+                              ? "Montserrat , sans-serif"
+                              : "Tajawal, sans-serif"
+                          }
+                        >
+                          {it.body}
+                        </Text>
                       </Box>
                     </Stack>
                   </a>

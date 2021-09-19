@@ -3,7 +3,7 @@ export const enVar1 = "Obtaining my baccalaureate Degree";
 export const enVar2 =
   "Worst years of my life where i got sick with hernia discal";
 export const enVar3 =
-  "I Abandoned université because my injury and because my université spacialité that i didn't like and it was science of matter";
+  "I Abandoned university because my injury and because my university specialty that i didn't like and it was science of matter";
 export const enVar4 =
   "My self learning begin with learning python fundamentals";
 export const enVar5 =

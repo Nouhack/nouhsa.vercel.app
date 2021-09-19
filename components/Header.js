@@ -52,7 +52,7 @@ export default function Header() {
             <SunIcon onClick={toggleColorMode} />
           )}
           <Center ml="30px" mt="5px">
-            <Text mr="5px">en</Text>
+            <Text mr="5px">English</Text>
             <Switch
               size="md"
               colorScheme="none"
@@ -63,7 +63,7 @@ export default function Header() {
                 console.log(router.pathname);
               }}
             />
-            <Text ml="5px">ar</Text>
+            <Text ml="5px">عربي</Text>
           </Center>
         </Center>
         <Spacer />
@@ -82,7 +82,15 @@ export default function Header() {
 
                 //  color="black"
               >
-                <Text>{router.locale === "en-US" ? enSkills : arSkills} </Text>
+                <Text
+                  fontFamily={
+                    router.locale === "en-US"
+                      ? "Montserrat , sans-serif"
+                      : "Tajawal, sans-serif"
+                  }
+                >
+                  {router.locale === "en-US" ? enSkills : arSkills}{" "}
+                </Text>
                 <Badge colorScheme="purple" ml={1}>
                   {router.locale === "en-US" ? "new" : "جديد"}
                 </Badge>
@@ -97,7 +105,13 @@ export default function Header() {
 
                 //  color="black"
               >
-                <Text>
+                <Text
+                  fontFamily={
+                    router.locale === "en-US"
+                      ? "Montserrat , sans-serif"
+                      : "Tajawal, sans-serif"
+                  }
+                >
                   {router.locale === "en-US" ? enProjects : arProjects}
                 </Text>
               </Button>
@@ -111,7 +125,15 @@ export default function Header() {
 
                 //    color="black"
               >
-                <Text>{router.locale === "en-US" ? enCareer : arCareer}</Text>
+                <Text
+                  fontFamily={
+                    router.locale === "en-US"
+                      ? "Montserrat , sans-serif"
+                      : "Tajawal, sans-serif"
+                  }
+                >
+                  {router.locale === "en-US" ? enCareer : arCareer}
+                </Text>
               </Button>
             </Link>
             <Link href="/">
@@ -120,7 +142,15 @@ export default function Header() {
                 ///   colorScheme="twitter"
                 _focus={{ outline: "none" }} //colorScheme="white"
               >
-                <Text>{router.locale === "en-US" ? enAbout : arAbout}</Text>
+                <Text
+                  fontFamily={
+                    router.locale === "en-US"
+                      ? "Montserrat , sans-serif"
+                      : "Tajawal, sans-serif"
+                  }
+                >
+                  {router.locale === "en-US" ? enAbout : arAbout}
+                </Text>
               </Button>
             </Link>
           </Stack>

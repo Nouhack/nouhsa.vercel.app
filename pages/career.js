@@ -124,10 +124,6 @@ export default function career() {
                     router.locale === "en-US" ? item.enVar11 : item.arVar11
                   }
                 />
-                <ItemWrapper
-                  value="This year was the turning point of my career where i done many
-                  great things"
-                />
                 {/* You can also use custom icons from react-icons */}
                 <ItemWrapper
                   value={

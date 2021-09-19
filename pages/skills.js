@@ -37,7 +37,7 @@ export default function Skills() {
           <Center w="100%">
             <Text fontWeight="bold">Front End</Text>
           </Center>
-          <List spacing={3}>
+          <List spacing={3} fontFamily="Montserrat , sans-serif">
             <ListItem>
               <ListIcon as={ChevronRightIcon} color="green.500" />
               html
@@ -75,6 +75,10 @@ export default function Skills() {
               <ListIcon as={ChevronRightIcon} color="green.500" />
               figma
             </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Framer
+            </ListItem>
           </List>
         </VStack>
         <Divider
@@ -95,7 +99,7 @@ export default function Skills() {
             {" "}
             <Text fontWeight="bold">Back End</Text>
           </Center>
-          <List spacing={3}>
+          <List spacing={3} fontFamily="Montserrat , sans-serif">
             <ListItem>
               <ListIcon as={ChevronRightIcon} color="green.500" />
               node js
@@ -153,7 +157,7 @@ export default function Skills() {
             {" "}
             <Text fontWeight="bold">Mobile dev</Text>
           </Center>
-          <List spacing={3}>
+          <List spacing={3} j fontFamily="Montserrat , sans-serif">
             <ListItem>
               <ListIcon as={ChevronRightIcon} color="green.500" />
               expo framwork
@@ -167,6 +171,72 @@ export default function Skills() {
             <ListItem>
               <ListIcon as={ChevronRightIcon} color="green.500" />
               react navigation
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Add Third part libraries
+            </ListItem>
+          </List>
+        </VStack>
+        <Divider
+          display={{ base: "none", lg: "block" }}
+          orientation="vertical"
+          height="auto"
+        />
+        {/*  =============== */}
+        <VStack
+          w="100%"
+          textAlign="start"
+          spacing={5}
+          alignItems="flex-start"
+          p={4}
+        >
+          <Center w="100%">
+            {" "}
+            <Text fontWeight="bold">Tools</Text>
+          </Center>
+          <List spacing={3} fontFamily="Montserrat , sans-serif">
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Vscode
+            </ListItem>
+
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Vim
+            </ListItem>
+
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Android Studio
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Eclipse
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              MySQL Workbench
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Linux Sytlem (Debian or redHat)
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Google dev Tools
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              GitHub
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Postman
+            </ListItem>
+            <ListItem>
+              <ListIcon as={ChevronRightIcon} color="green.500" />
+              Prisma Studio
             </ListItem>
           </List>
         </VStack>

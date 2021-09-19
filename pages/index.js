@@ -42,12 +42,14 @@ export default function Home() {
             boxShadow="dark-lg"
             w={300}
             h={300}
-            borderRadius="xl"
-            rounded="10%"
+            transition="border-radius 1s ease-out 100ms"
+            //         borderRadius="xl"
+            rounded="30%"
             // roundedTopEnd={50}
             //  roundedBottomStart={30}
             // roundedTopEnd={300}
             overflow="hidden"
+            _hover={{ rounded: "0%" }}
           >
             <Image
               src="/Dev.jpg"
@@ -76,15 +78,18 @@ export default function Home() {
             >
               {router.locale === "en-US" ? englishIntroTitle : arabicIntroTitle}
             </Heading>
-            <Text fontSize="md" fontFamily="mono">
+            <Text
+              fontSize="md"
+              lineHeight="190%"
+              fontFamily={
+                router.locale === "en-US"
+                  ? "Montserrat , sans-serif"
+                  : "Tajawal, sans-serif"
+              }
+            >
               {router.locale === "en-US"
                 ? englishIntroduction
                 : arabicIntroduction}
-              {router.locale === "en-US" && (
-                <Text textShadow="1px 2px #9c9c9c">
-                  clean code clean design .
-                </Text>
-              )}
             </Text>
             <HStack
               align="center"
