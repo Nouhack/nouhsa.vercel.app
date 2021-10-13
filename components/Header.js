@@ -14,33 +14,11 @@ import {
   Switch,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-
-import { useRouter } from "next/router";
-
-import {
-  arAbout,
-  enAbout,
-  arCareer,
-  enCareer,
-  arProjects,
-  enProjects,
-  arSkills,
-  enSkills,
-} from "../data/Titles";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
-  const [localValue, setlocalValue] = useState("en-US");
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push(router.pathname, router.pathname, {
-      locale: localValue,
-    });
-  }, [localValue]);
 
   return (
     <>
@@ -51,20 +29,6 @@ export default function Header() {
           ) : (
             <SunIcon onClick={toggleColorMode} />
           )}
-          <Center ml="30px" mt="5px">
-            <Text mr="5px">English</Text>
-            <Switch
-              size="md"
-              colorScheme="none"
-              onChange={(event) => {
-                localValue === "en-US"
-                  ? setlocalValue("ar-DZ")
-                  : setlocalValue("en-US");
-                console.log(router.pathname);
-              }}
-            />
-            <Text ml="5px">عربي</Text>
-          </Center>
         </Center>
         <Spacer />
         <Center
@@ -77,22 +41,15 @@ export default function Header() {
             <Link href="/skills">
               <Button
                 size="sm"
+                fontFamily="Comic Sans MS"
                 bg="transparent"
                 _focus={{ outline: "none" }} //colorScheme="white"
 
                 //  color="black"
               >
-                <Text
-                  fontFamily={
-                    router.locale === "en-US"
-                      ? "Montserrat , sans-serif"
-                      : "Tajawal, sans-serif"
-                  }
-                >
-                  {router.locale === "en-US" ? enSkills : arSkills}{" "}
-                </Text>
+                Skills
                 <Badge colorScheme="purple" ml={1}>
-                  {router.locale === "en-US" ? "new" : "جديد"}
+                  new
                 </Badge>
               </Button>
             </Link>
@@ -101,56 +58,35 @@ export default function Header() {
               <Button
                 size="sm"
                 bg="transparent"
+                fontFamily="Comic Sans MS"
                 _focus={{ outline: "none" }} //colorScheme="white"
 
                 //  color="black"
               >
-                <Text
-                  fontFamily={
-                    router.locale === "en-US"
-                      ? "Montserrat , sans-serif"
-                      : "Tajawal, sans-serif"
-                  }
-                >
-                  {router.locale === "en-US" ? enProjects : arProjects}
-                </Text>
+                Projects
               </Button>
             </Link>
 
             <Link href="/career">
               <Button
                 size="sm"
+                fontFamily="Comic Sans MS"
                 bg="transparent"
                 _focus={{ outline: "none" }} //colorScheme="white"
 
                 //    color="black"
               >
-                <Text
-                  fontFamily={
-                    router.locale === "en-US"
-                      ? "Montserrat , sans-serif"
-                      : "Tajawal, sans-serif"
-                  }
-                >
-                  {router.locale === "en-US" ? enCareer : arCareer}
-                </Text>
+                Career
               </Button>
             </Link>
             <Link href="/">
               <Button
+                fontFamily="Comic Sans MS"
                 size="sm"
                 ///   colorScheme="twitter"
                 _focus={{ outline: "none" }} //colorScheme="white"
               >
-                <Text
-                  fontFamily={
-                    router.locale === "en-US"
-                      ? "Montserrat , sans-serif"
-                      : "Tajawal, sans-serif"
-                  }
-                >
-                  {router.locale === "en-US" ? enAbout : arAbout}
-                </Text>
+                About
               </Button>
             </Link>
           </Stack>
@@ -193,7 +129,7 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  {router.locale === "en-US" ? enAbout : arAbout}
+                  About
                 </Button>
               </Link>
 
@@ -204,7 +140,7 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  {router.locale === "en-US" ? enCareer : arCareer}
+                  Career
                 </Button>
               </Link>
               <Link href="/projects">
@@ -214,7 +150,7 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  {router.locale === "en-US" ? enProjects : arProjects}
+                  Projects
                 </Button>
               </Link>
 
@@ -225,9 +161,9 @@ export default function Header() {
                   color="white"
                   _focus={{ outline: "none" }} //colorScheme="white"
                 >
-                  {router.locale === "en-US" ? enSkills : arSkills}
+                  Skills
                   <Badge colorScheme="purple" ml={1}>
-                    {router.locale === "en-US" ? "new" : "جديد"}
+                    new
                   </Badge>
                 </Button>
               </Link>

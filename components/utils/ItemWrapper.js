@@ -8,13 +8,7 @@ export default function ItemWrapper({ value }) {
     <ListItem>
       <HStack alignItems="flex-start">
         <ListIcon as={ChevronRightIcon} color="green.500" mt={0.5} />
-        <Box
-          fontFamily={
-            router.locale === "en-US"
-              ? "Montserrat , sans-serif"
-              : "Tajawal, sans-serif"
-          }
-        >
+        <Box width="100%" color="#4c4c4c" fontFamily="comic Sans MS">
           {value}
         </Box>
       </HStack>

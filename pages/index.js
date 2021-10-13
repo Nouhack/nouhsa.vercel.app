@@ -15,50 +15,49 @@ import { AiFillGithub } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
 import { SiGmail } from "react-icons/si";
 import { BsDownload } from "react-icons/bs";
-import { useRouter } from "next/router";
-
-import Image from "next/image";
 
 import {
-  arabicIntroduction,
   englishIntroduction,
-  arabicIntroTitle,
   englishIntroTitle,
 } from "../data/DeveloperIntroduction";
 
 export default function Home() {
   const toast = useToast();
-  const router = useRouter();
 
   return (
     <>
       <Head>
         <title>About Developer</title>
+        <meta name="description" content="Self Taugth fullstack developer" />
       </Head>
 
       <Stack h="88vh" direction={["column", "column", "row"]} spacing="10px">
         <Center w={{ base: "100%", md: "40%" }} h="100%">
           <Box
-            boxShadow="dark-lg"
-            w={300}
-            h={300}
-            transition="border-radius 1s ease-out 100ms"
+            //boxShadow="dark-lg"
+            w={200}
+            h={200}
+            //transition="border-radius 1s ease-out 100ms"
             //         borderRadius="xl"
-            rounded="30%"
+            rounded="100%"
             // roundedTopEnd={50}
             //  roundedBottomStart={30}
             // roundedTopEnd={300}
             overflow="hidden"
-            _hover={{ rounded: "0%" }}
+            //_hover={{ rounded: "0%" }}
           >
-            <Image
+            <img
               src="/Dev.jpg"
               alt=""
-              layout="fixed"
-              width={300}
-              height={300}
-              objectFit="cover"
-              priority={true}
+              //layout="fixed"
+              //objectFit="cover"
+              //priority={true}
+              style={{
+                objectFit: "cover",
+                width: "200px",
+                height: "200px",
+                transform: "scale(1.1)",
+              }}
             />
           </Box>
         </Center>
@@ -66,30 +65,27 @@ export default function Home() {
         <Flex w={{ base: "100%", md: "60%" }} alignItems="center" h="100%">
           <Stack
             spacing={{ base: 5, md: 8 }}
-            textAlign={{ base: "center", md: "start" }}
+            textAlign={{
+              base: "center",
+              md: "start",
+            }}
           >
             <Heading
-              fontFamily="mono"
+              fontFamily="Tahoma"
               size="lg"
               mt={{ base: "20px", md: null }}
               fontSize={["20px", "23px", "26px", "40px"]}
               mr="10px"
-              textShadow="3px 3px #9c9c9c"
             >
-              {router.locale === "en-US" ? englishIntroTitle : arabicIntroTitle}
+              {englishIntroTitle}
             </Heading>
             <Text
               fontSize="md"
               lineHeight="190%"
-              fontFamily={
-                router.locale === "en-US"
-                  ? "Montserrat , sans-serif"
-                  : "Tajawal, sans-serif"
-              }
+              color="#4c4c4c"
+              fontFamily="comic Sans MS"
             >
-              {router.locale === "en-US"
-                ? englishIntroduction
-                : arabicIntroduction}
+              {englishIntroduction}
             </Text>
             <HStack
               align="center"
@@ -99,6 +95,7 @@ export default function Home() {
             >
               <IconButton
                 as="a"
+                rel="noopener"
                 href="https://github.com/Nouhack"
                 target="_blank"
                 variant="outline"
@@ -108,6 +105,7 @@ export default function Home() {
               />
               <IconButton
                 as="a"
+                rel="noopener"
                 href="https://twitter.com/nouhack_saiche"
                 target="_blank"
                 variant="outline"
@@ -136,6 +134,7 @@ export default function Home() {
               <Tooltip label="View My resume" fontSize="md">
                 <IconButton
                   as="a"
+                  rel="noopener"
                   target="_blank"
                   href="https://drive.google.com/file/d/1PL2kt--nW-8-cLxVZE5XWrjoXrb9pC89/view?usp=sharing"
                   variant="outline"
