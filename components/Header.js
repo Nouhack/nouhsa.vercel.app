@@ -7,18 +7,28 @@ import {
   IconButton,
   Slide,
   Text,
+  Link,
   useColorMode,
   useDisclosure,
   Box,
   Badge,
   Switch,
 } from "@chakra-ui/react";
+import NextLink from "./utils/NextLink";
+import { useRouter } from "next/router";
+
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
-import Link from "next/link";
+
+const colors = {
+  selected: "tomato",
+
+  notSelected: "transparent",
+};
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
+  const router = useRouter();
 
   return (
     <>
@@ -33,62 +43,99 @@ export default function Header() {
         <Spacer />
         <Center
           p="5"
+          w="100%"
           h="100%"
           display={{ base: "none", lg: "inherit" }}
           //  bg="red"
         >
           <Stack direction="row" spacing="10px">
-            <Link href="/skills">
+            <NextLink href="/skills">
               <Button
                 size="sm"
-                fontFamily="Comic Sans MS"
+                pt={1}
                 bg="transparent"
+                fontWeight="normal"
+                borderBottomColor={
+                  router.pathname === "/skills"
+                    ? colors.selected
+                    : colors.notSelected
+                }
+                color="unset"
+                rounded={0}
+                borderBottomWidth={4}
+                _hover={{ bg: "transparent" }}
+                _active={{ bg: "transparent" }}
                 _focus={{ outline: "none" }} //colorScheme="white"
 
                 //  color="black"
               >
                 Skills
-                <Badge colorScheme="purple" ml={1}>
-                  new
-                </Badge>
               </Button>
-            </Link>
+            </NextLink>
 
-            <Link href="/projects">
+            <NextLink href="/projects">
               <Button
                 size="sm"
+                rounded={0}
+                borderBottomWidth={4}
                 bg="transparent"
-                fontFamily="Comic Sans MS"
+                fontWeight="normal"
+                borderBottomColor={
+                  router.pathname === "/projects"
+                    ? colors.selected
+                    : colors.notSelected
+                }
+                _hover={{ bg: "transparent" }}
+                _active={{ bg: "transparent" }}
                 _focus={{ outline: "none" }} //colorScheme="white"
 
                 //  color="black"
               >
                 Projects
               </Button>
-            </Link>
+            </NextLink>
 
-            <Link href="/career">
+            <NextLink href="/career">
               <Button
                 size="sm"
-                fontFamily="Comic Sans MS"
                 bg="transparent"
+                rounded={0}
+                borderBottomWidth={4}
+                borderBottomColor={
+                  router.pathname === "/career"
+                    ? colors.selected
+                    : colors.notSelected
+                }
+                fontWeight="normal"
                 _focus={{ outline: "none" }} //colorScheme="white"
+                _hover={{ bg: "transparent" }}
+                _active={{ bg: "transparent" }}
 
                 //    color="black"
               >
                 Career
               </Button>
-            </Link>
-            <Link href="/">
+            </NextLink>
+
+            <NextLink href="/">
               <Button
-                fontFamily="Comic Sans MS"
                 size="sm"
-                ///   colorScheme="twitter"
+                fontWeight="normal"
+                bg="transparent"
+                rounded={0}
+                borderBottomWidth={4}
+                borderBottomColor={
+                  router.pathname === "/" ? colors.selected : colors.notSelected
+                }
+                //colorScheme="twitter"
+
+                _hover={{ bg: "transparent" }}
+                _active={{ bg: "transparent" }}
                 _focus={{ outline: "none" }} //colorScheme="white"
               >
                 About
               </Button>
-            </Link>
+            </NextLink>
           </Stack>
         </Center>
         {/*  ----------------------- mobile header ---------------------------*/}
@@ -122,7 +169,7 @@ export default function Header() {
           </Flex>
           <Center w="100%" h="88vh">
             <Stack direction="column" spacing="25px" p="20" w="100%">
-              <Link href="/">
+              <NextLink href="/">
                 <Button
                   colorScheme="transparent"
                   onClick={onToggle}
@@ -131,9 +178,9 @@ export default function Header() {
                 >
                   About
                 </Button>
-              </Link>
+              </NextLink>
 
-              <Link href="/career">
+              <NextLink href="/career">
                 <Button
                   onClick={onToggle}
                   colorScheme="transparent"
@@ -142,8 +189,9 @@ export default function Header() {
                 >
                   Career
                 </Button>
-              </Link>
-              <Link href="/projects">
+              </NextLink>
+
+              <NextLink href="/projects">
                 <Button
                   onClick={onToggle}
                   colorScheme="transparent"
@@ -152,9 +200,9 @@ export default function Header() {
                 >
                   Projects
                 </Button>
-              </Link>
+              </NextLink>
 
-              <Link href="/skills">
+              <NextLink href="/skills">
                 <Button
                   onClick={onToggle}
                   colorScheme="transparent"
@@ -166,7 +214,7 @@ export default function Header() {
                     new
                   </Badge>
                 </Button>
-              </Link>
+              </NextLink>
             </Stack>
           </Center>
         </Box>

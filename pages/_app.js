@@ -2,6 +2,7 @@ import { ChakraProvider, Container } from "@chakra-ui/react";
 import Header from "../components/Header";
 import { mode } from "@chakra-ui/theme-tools";
 import { extendTheme } from "@chakra-ui/react";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,8 +11,8 @@ function MyApp({ Component, pageProps }) {
         styles: {
           global: (props) => ({
             body: {
-              bg: mode("#f9fafb", "black")(props),
-              color: mode("black", "#f9fafb")(props),
+              bg: mode("#f9fafb", "#111")(props),
+              color: mode("#111", "#f9fafb")(props),
             },
           }),
         },
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     >
       <Container
         //   bg="red.500"
+        id="container"
         maxWidth={{ base: "100%", lg: "62em" }}
         pos="relative"
       >

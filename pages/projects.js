@@ -15,6 +15,7 @@ import {
   ListItem,
   List,
 } from "@chakra-ui/react";
+
 import { SearchIcon } from "@chakra-ui/icons";
 import { RiGitRepositoryLine } from "react-icons/ri";
 import { useState } from "react";
@@ -58,15 +59,24 @@ export default function career() {
               .map((it) => {
                 return (
                   <a href={it.githubLink} target="_blank" rel="noopener">
-                    <Stack direction="column" spacing={3}>
+                    <Stack
+                      direction="column"
+                      spacing={3}
+                      style={{
+                        //position: "relative",
+                        borderRadius: 100,
+                        border: "5px solid transparent",
+                        borderImage:
+                          "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+                        borderImageSlice: 1,
+                        padding: 30,
+                      }}
+                    >
                       <Stack direction={{ base: "column", md: "row" }}>
                         <Box w={{ base: "100%", md: "80%" }}>
                           <List spacing={3}>
                             <ListItem>
-                              <Text
-                                fontFamily="Comic Sans MS"
-                                fontWeight="bold"
-                              >
+                              <Text fontWeight="bold">
                                 <ListIcon
                                   as={RiGitRepositoryLine}
                                   color="green.500"
@@ -78,7 +88,12 @@ export default function career() {
                         </Box>
                         <Spacer display={{ base: "none", md: null }} />
                         <Flex
-                          justifyContent={{ base: "flex-start", md: "center" }}
+                          fontWeight="bold"
+                          whiteSpace="nowrap"
+                          justifyContent={{
+                            base: "flex-start",
+                            md: "flex-end",
+                          }}
                           w={{ base: "100%", md: "20%" }}
                         >
                           <Text color="#4c4c4c">{it.technology} </Text>
@@ -86,9 +101,7 @@ export default function career() {
                       </Stack>
                       <Box w="90%">
                         {" "}
-                        <Text color="#4c4c4c" fontFamily="Comic Sans MS">
-                          {it.body}
-                        </Text>
+                        <Text color="#4c4c4c">{it.body}</Text>
                       </Box>
                     </Stack>
                   </a>

@@ -52,3 +52,13 @@ export const enVar27 =
   "Learn how to implement authentication from scratch whether session based or jwt and also with the help with passport js";
 export const enVar28 =
   "Learn no sql database especially mongodb and how to deploy it in atlas cloud service .";
+
+export const enVar29 =
+  "I got accepted for a full time job as an engineer but the situation was not comfortable for me so i canceled after being passed the interview with success .";
+
+export const enVar30 =
+  "I started 2022 new year by learning ionic ToolKit and create cross platform apps with the help with capacitor .";
+export const enVar31 =
+  "Trying to improve my animation and gestures mobile skills so i made a couple of mobile applications with the help of reanimated 2 and gesture handler libraries as a second goal in that new year .";
+
+export const enVar32 = "Seeking for a Full Time Job .....";

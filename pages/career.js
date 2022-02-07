@@ -24,23 +24,47 @@ export default function career() {
         />
       </Head>
       <Container maxWidth={{ base: "100%", lg: "45em" }}>
-        <Stack h="100vh" direction="column" spacing="50px">
-          <Center>
-            <Heading
-              mt={50}
-              fontFamily="mono"
-              size="lg"
-              fontSize={["20px", "23px", "26px", "40px"]}
-              mr="10px"
-            >
-              TimeLine
-            </Heading>
-          </Center>
+        <Stack h="100vh" direction="column" spacing="20px">
           <Stack direction="row" p={4} spacing={2}>
-            <Divider orientation="vertical" />
             <Stack direction="column">
-              <Text fontSize={18}>2021</Text>
-              <List spacing={5} pl={10} textAlign="left">
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2022
+              </Text>
+              <List spacing={5} pl={10} pt={8} textAlign="left">
+                <ItemWrapper value={item.enVar32} />
+                <ItemWrapper value={item.enVar31} />
+                <ItemWrapper value={item.enVar30} />
+              </List>
+
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2021
+              </Text>
+              <List spacing={5} pl={10} pt={8} textAlign="left">
+                <ItemWrapper value={item.enVar29} />
                 <ItemWrapper value={item.enVar28} />
                 <ItemWrapper value={item.enVar27} />
                 <ItemWrapper value={item.enVar26} />
@@ -52,9 +76,23 @@ export default function career() {
                 {/* You can also use custom icons from react-icons */}
                 <ItemWrapper value={item.enVar20} />
               </List>
-              <Text fontSize={18}>2020</Text>
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
 
-              <List spacing={5} pl={10} textAlign="left">
+                  borderImageSlice: 1,
+                }}
+              >
+                2020
+              </Text>
+
+              <List spacing={5} pl={10} pt={8} textAlign="left">
                 <ItemWrapper value={item.enVar19} />
                 <ItemWrapper value={item.enVar17} />
                 <ItemWrapper value={item.enVar16} />
@@ -65,28 +103,102 @@ export default function career() {
                 <ItemWrapper value={item.enVar11} />
                 <ItemWrapper value={item.enVar10} />
               </List>
-              <Text fontSize={18}>2019</Text>
-              <List spacing={5} pl={10} textAlign="left">
+
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2019
+              </Text>
+              <List spacing={5} pl={10} pt={8} textAlign="left">
                 <ItemWrapper value={item.enVar9} />
                 <ItemWrapper value={item.enVar8} />
               </List>
-              <Text fontSize={18}>2018</Text>
-              <List spacing={3} pl={10} textAlign="left">
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2018
+              </Text>
+              <List spacing={3} pl={10} pt={8} textAlign="left">
                 <ItemWrapper value={item.enVar7} />
                 <ItemWrapper value={item.enVar6} />
               </List>
-              <Text fontSize={18}>2017</Text>
-              <List spacing={5} pl={10} textAlign="left">
+
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2017
+              </Text>
+              <List spacing={5} pl={10} pt={8} textAlign="left">
                 <ItemWrapper value={item.enVar5} />
                 <ItemWrapper value={item.enVar4} />
               </List>
-              <Text fontSize={18}>2014 - 2017</Text>
-              <List spacing={5} pl={10} textAlign="left">
+
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2014 - 2017
+              </Text>
+              <List spacing={5} pl={10} pt={8} textAlign="left">
                 <ItemWrapper value={item.enVar3} />
                 <ItemWrapper value={item.enVar2} />
               </List>
-              <Text fontSize={18}>2014</Text>
-              <List spacing={5} pl={10} textAlign="left">
+
+              <Text
+                fontSize={20}
+                fontWeight="bold"
+                style={{
+                  textAlign: "center",
+                  padding: 10,
+                  borderBottom: "5px solid transparent",
+                  borderImage:
+                    "linear-gradient(to right, #6ee7b7 ,#3b82f6, #9333ea)",
+
+                  borderImageSlice: 1,
+                }}
+              >
+                2014
+              </Text>
+              <List spacing={5} pl={10} pt={8} textAlign="left">
                 <ItemWrapper value={item.enVar1} />
               </List>
             </Stack>

@@ -8,7 +8,7 @@ export default function ItemWrapper({ value }) {
     <ListItem>
       <HStack alignItems="flex-start">
         <ListIcon as={ChevronRightIcon} color="green.500" mt={0.5} />
-        <Box width="100%" color="#4c4c4c" fontFamily="comic Sans MS">
+        <Box width="100%" color="#4c4c4c">
           {value}
         </Box>
       </HStack>
