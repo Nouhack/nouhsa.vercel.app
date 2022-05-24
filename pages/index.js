@@ -188,7 +188,7 @@ export default function Home() {
               rel="noopener"
               target="_blank"
               download={true}
-              href="/resume.pdf"
+              href="/2022.png"
               //href="https://drive.google.com/file/d/1PL2kt--nW-8-cLxVZE5XWrjoXrb9pC89/view?usp=sharing"
               variant="outline"
               aria-label="Call Sage"

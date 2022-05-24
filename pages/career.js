@@ -43,6 +43,8 @@ export default function career() {
                 2022
               </Text>
               <List spacing={5} pl={10} pt={8} textAlign="left">
+                <ItemWrapper value={item.enVar34} />
+                <ItemWrapper value={item.enVar33} />
                 <ItemWrapper value={item.enVar32} />
                 <ItemWrapper value={item.enVar31} />
                 <ItemWrapper value={item.enVar30} />

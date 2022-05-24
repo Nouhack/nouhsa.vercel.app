@@ -62,3 +62,7 @@ export const enVar31 =
   "Trying to improve my animation and gestures mobile skills so i made a couple of mobile applications with the help of reanimated 2 and gesture handler libraries as a second goal in that new year .";
 
 export const enVar32 = "Seeking for a Full Time Job .....";
+
+export const enVar33 = "Got a job as a Full Stack Developer for one weed";
+export const enVar34 =
+  "create AkramCSS utility library to help frond end developers to write less css";
