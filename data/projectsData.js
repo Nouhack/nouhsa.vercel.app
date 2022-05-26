@@ -1,5 +1,11 @@
 export const dumData = [
   {
+    title: "recipe",
+    body: "recipe is a cross platrorm mobile application created using expo managed workflow made in 3 hours",
+    technology: "expo CLI",
+    githubLink: "https://github.com/Nouhack/reciper",
+  },
+  {
     title: "desart portfolio",
     body: "desart is an html css portfolio with responsive design for all screens , The UI is clean and modern and it gives the user a smooth experience.",
     technology: "html + css",
