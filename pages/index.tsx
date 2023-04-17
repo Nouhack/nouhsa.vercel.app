@@ -20,11 +20,7 @@ export default function Index({}: Props) {
           <br /> Where we offer geolocalization GPS solution.
         </p>
         <div className="dev_contact_info">
-          <img
-            className="personal_image"
-            src="https://nouhsa.vercel.app/Dev.jpg"
-            alt=""
-          />
+          <img className="personal_image" src="./Dev.jpg" alt="" />
 
           <ul className="social_media">
             <li>
