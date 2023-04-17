@@ -13,7 +13,7 @@ export default function Index({}: Props) {
       <main>
         <h2>About me</h2>
         <p className="dev_introduction">
-          Salam alikoum I'am nouh ,{" "}
+          Salam alikoum I'am nouh ,
           <span className="nested_dev_introduction">
             Full Stack developer at Hostaplast
           </span>

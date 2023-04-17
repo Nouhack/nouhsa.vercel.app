@@ -20,9 +20,9 @@ export default function Blog({ posts }) {
       </Head>
       <h2>Blog</h2>
       <div className="blog_wrapper">
-        {Posts.map((item) => {
+        {Posts.map((item, index) => {
           return (
-            <div className="post_container">
+            <div key={index} className="post_container">
               <p className="blog_title">
                 <Link href={`blog/${item.slug}`}>{item.title}</Link>
               </p>
