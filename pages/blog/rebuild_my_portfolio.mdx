@@ -1,0 +1,172 @@
+# How did i build my portfolio
+
+First of all welcome to my first post in my blog , where i'am gonna show
+you how did i rebuild my personal portfolio using :
+
+- Nextjs
+- MDX
+- ✨and that's it✨
+
+## Run it locally
+
+1- First you have to clone my portfolio repo
+
+```sh
+git clone https://github.com/Nouhack/nouhsa.vercel.app
+```
+
+2- Install dependencies
+
+```sh
+npm install
+```
+
+3- Run the project
+
+```sh
+npm run dev
+```
+
+Now go to your browser and type http://localhost:3000 .
+
+Open the project with your favorite text editor ex : Vscode and follow :
+inside pages folder you'll find :
+
+```tsx
+// index.tsx file
+import React from "react";
+
+type Props = {};
+
+export default function Index({}: Props) {
+  return (
+    <main>
+      <h2>Saiche nouh</h2>
+      <p className="dev_introduction">
+        Salam alikoum I'am nouh ,{" "}
+        <span className="nested_dev_introduction">
+          Full Stack developer at Hostaplast
+        </span>
+        <br /> Where we offer geolocalization GPS solution.
+      </p>
+      <div className="dev_contact_info">
+        <img
+          className="personal_image"
+          src="https://nouhsa.vercel.app/Dev.jpg"
+          alt=""
+        />
+
+        <ul className="social_media">
+          <li>
+            Github :{" "}
+            <a href="https://github.com/Nouhack" target="_blank">
+              @nouhack
+            </a>
+          </li>
+          <li>
+            Tiktok : <a href="">@nouhack</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  );
+}
+```
+
+```tsx
+// blog.tsx file
+import path from "path";
+import React from "react";
+import { promises as fs } from "fs";
+import grayMatter from "gray-matter";
+import Link from "next/link";
+import { Posts } from "../posts";
+
+type Props = {};
+
+export default function Blog({ posts }) {
+  return (
+    <div>
+      <h2>Blog</h2>
+      <div className="blog_wrapper">
+        {Posts.map((item) => {
+          return (
+            <div className="post_container">
+              <p className="blog_title">
+                <Link href={`blog/${item.slug}`}>{item.title}</Link>
+                <p className="blog_date">{item.date}</p>
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+```
+
+The file **index.tsx** is a simple main page , nothing fanacy and **blog.tsx** is
+where we list all our blog posts from the file **posts.js**
+
+```javascript
+export const Posts = [
+  {
+    title: "first post",
+    date: "2022-03-12",
+    slug: "/home",
+  },
+];
+```
+
+In the pages folder you can see a folder named blog contains a list of mdx files and each file can be accessed like =>
+`/[name of the_file (without .mdx)]`.
+
+But how were we able to route easly that .mdx file by just writing `/its_name` , hmmm ... thanks to @next/mdx .
+
+# `@next/mdx`
+
+The `@next/mdx` package is configured in the `next.config.js` file at your projects root. **It sources data from local files**, allowing you to create pages with a `.mdx` extension, directly in your `/pages` directory.
+
+The `@next/mdx` package is configured in the `next.config.js` file at your projects root. **It sources data from local files**, allowing you to create pages with a `.mdx` extension, directly in your `/pages` directory.
+
+# `Setup @next/mdx in Next.js`
+
+The following steps outline how to setup `@next/mdx` in your Next.js project:
+
+1. Install the required packages:
+
+   ```bash
+     npm install @next/mdx @mdx-js/loader @mdx-js/react
+   ```
+
+2. change the name of `next.config.js` to `next.config.mjs` to use import instead of require.
+
+3. Require the package and configure to support top level `.mdx` pages. The following adds the `options` object key allowing you to pass in any plugins:
+
+```mjs
+// next.config.mjs
+import remarkGfm from "remark-gfm";
+import createMDX from "@next/mdx";
+import rehypeHighlight from "rehype-highlight";
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+};
+
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeHighlight],
+  },
+});
+
+export default withMDX(nextConfig);
+```
+
+# `MDX Plugins`
+
+We are using 2 plugins , `remark-gfm` to support GFM (autolink literals, footnotes, strikethrough, tables, tasklists) ,
+and `rehype` plugin to apply syntax highlighting to code with highlight.js (through lowlight) , `dont forget to import the style of the code block in your \_app theck the file in line 4`.

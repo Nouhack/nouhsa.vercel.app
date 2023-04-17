@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.2.4",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
     "next": "13.2.4",
+    "path": "^0.12.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rehype-highlight": "^6.0.0",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
     "typescript": "5.0.2"
   }
 }
