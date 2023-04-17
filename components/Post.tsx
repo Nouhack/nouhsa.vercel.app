@@ -1,6 +1,6 @@
 import React from "react";
 
-const Post = ({ meta, children }) => {
+const Post = ({ meta, children }: any) => {
   return (
     <div>
       <h1>{meta.title}</h1>
