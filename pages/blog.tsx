@@ -8,7 +8,7 @@ import Head from "next/head";
 
 type Props = {};
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }: any) {
   return (
     <div>
       <Head>
