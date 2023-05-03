@@ -5,19 +5,24 @@ import grayMatter from "gray-matter";
 import Link from "next/link";
 import { Posts } from "../posts";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 type Props = {};
+
+const url = "https://www.nouhsa.vercel.app/blog";
+const title = "Blog - Nouh saiche";
 
 export default function Blog({ posts }: any) {
   return (
     <div>
-      <Head>
-        <title>Blog | Nouh Saiche</title>
-        <meta
-          name="description"
-          content="Read my thoughts on software development, design, and more."
-        />
-      </Head>
+      <NextSeo
+        title={title}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+        }}
+      />
       <h2>Blog</h2>
       <div className="blog_wrapper">
         {Posts.map((item, index) => {

@@ -1,15 +1,23 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
+
 import React from "react";
 
 type Props = {};
 
+const url = "https://www.nouhsa.vercel.app/";
+const title = "About Me - Nouh saiche";
+
 export default function Index({}: Props) {
   return (
     <>
-      <Head>
-        <title>Nouh Saiche</title>
-        <meta name="description" content="Full Stack developer at Hostaplast" />
-      </Head>
+      <NextSeo
+        title={title}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+        }}
+      />
       <main>
         <h2>About me</h2>
         <p className="dev_introduction">
