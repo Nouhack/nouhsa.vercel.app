@@ -15,7 +15,11 @@ body {
   padding: 0;
   text-align: right;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 3rem;
 }
 .header li {
   display: inline-block; /* Display list items horizontally */
@@ -78,4 +82,11 @@ body {
 /* post page */
 .post_date {
   color: grey;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
 }

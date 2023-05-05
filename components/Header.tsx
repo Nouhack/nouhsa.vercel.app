@@ -7,11 +7,24 @@ export default function Header({}: Props) {
   return (
     <ul className="header">
       <li>
-        <Link href="/">Home</Link>
+        <Link
+          href="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <img src="favicon.ico" alt="" width={40} height={40} />
+        </Link>
       </li>
-      <li>
-        <Link href="/blog">Blog</Link>
-      </li>
+      <div>
+        <li>
+          <Link href="/">About</Link>
+        </li>
+        <li>
+          <Link href="/blog">Blog</Link>
+        </li>
+      </div>
     </ul>
   );
 }
