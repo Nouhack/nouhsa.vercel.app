@@ -24,6 +24,9 @@ export default function Header({}: Props) {
         <li>
           <Link href="/blog">Blog</Link>
         </li>
+        <li>
+          <Link href="/resume">Resume</Link>
+        </li>
       </div>
     </ul>
   );
