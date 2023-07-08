@@ -6,7 +6,7 @@ import { SignIn, SignOut } from "../components/Buttons";
 
 type Props = {};
 
-const fetcher = (url) => fetch(url).then((r) => r.json());
+const fetcher = (url: any) => fetch(url).then((r) => r.json());
 
 export default function Guestbook({}: Props) {
   const { data, error, isLoading } = useSWR("/api/hello", fetcher);
@@ -30,7 +30,7 @@ export default function Guestbook({}: Props) {
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        data.data.map((entry) => (
+        data.data.map((entry: any) => (
           <div key={entry.id} style={{ marginTop: "1rem" }}>
             <div style={{ fontSize: 15 }}>
               <span style={{ color: "grey" }}>{entry.created_by}: </span>
