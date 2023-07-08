@@ -1,6 +1,7 @@
 import { fav_blogs } from "@/More/Fav_blog";
-import Skills_box from "@/components/skills_box";
+import Skillbox from "@/components/Skills_box";
 import { NextSeo } from "next-seo";
+import Image from "next/image";
 
 import React from "react";
 
@@ -20,37 +21,33 @@ export default function Index({}: Props) {
           title,
         }}
       />
-
-      {/* <>
-          </> */}
       <main>
-        <h2>hey, I'm Nouh 👋</h2>
+        <h2>hey, I‘m Nouh 👋</h2>
         <div className="dev_introduction">
-          I'am a self-taught developer with a Higher Technician degree in
+          I‘am a self-taught developer with a Higher Technician degree in
           database management systems. Experienced in
-          <Skills_box icon="./skills/react.svg" name="React js" />
-          ,
-          <Skills_box icon="./skills/mobile.svg" name="React Native" />,
-          <Skills_box icon="./skills/firebase.svg" name="Firebase" />,
-          <Skills_box icon="./skills/nextjs.svg" name="Next.js" />, and
-          <Skills_box icon="./skills/typescript.svg" name="Typescript" />.
-          <Skills_box icon="./skills/html.svg" name="HTML" />,
-          <Skills_box icon="./skills/css.svg" name="CSS" />,
-          <Skills_box icon="./skills/sass.svg" name="Sass" />,
-          <Skills_box icon="./skills/docker.svg" name="Docker" />,
-          <Skills_box icon="./skills/vim.svg" name="Vim" />,
-          <Skills_box icon="./skills/mongodb.svg" name="No SQL" />,
-          <Skills_box icon="./skills/sql.svg" name="Prisma ORM" />,
-          <Skills_box icon="./skills/express.svg" name="Express js" />,
-          <Skills_box icon="./skills/node.svg" name="Node js" />, and
-          <Skills_box icon="./skills/js.svg" name="Javascript" />. Passionate
+          <Skillbox icon="./skills/react.svg" name="React js" />,
+          <Skillbox icon="./skills/mobile.svg" name="React Native" />,
+          <Skillbox icon="./skills/firebase.svg" name="Firebase" />,
+          <Skillbox icon="./skills/nextjs.svg" name="Next.js" />, and
+          <Skillbox icon="./skills/typescript.svg" name="Typescript" />.
+          <Skillbox icon="./skills/html.svg" name="HTML" />,
+          <Skillbox icon="./skills/css.svg" name="CSS" />,
+          <Skillbox icon="./skills/sass.svg" name="Sass" />,
+          <Skillbox icon="./skills/docker.svg" name="Docker" />,
+          <Skillbox icon="./skills/vim.svg" name="Vim" />,
+          <Skillbox icon="./skills/mongodb.svg" name="No SQL" />,
+          <Skillbox icon="./skills/sql.svg" name="Prisma ORM" />,
+          <Skillbox icon="./skills/express.svg" name="Express js" />,
+          <Skillbox icon="./skills/node.svg" name="Node js" />, and
+          <Skillbox icon="./skills/js.svg" name="Javascript" />. Passionate
           about developing apps and software, eager to contribute skills and
           collaborate with creative teams. Seeking opportunities to enhance
           abilities and gain valuable experience.
         </div>
         <div className="dev_contact_info">
           <div style={{ gap: "0.6rem", display: "flex", alignItems: "center" }}>
-            <img
+            <Image
               src="./arrow.svg"
               width={12}
               height={12}
@@ -65,22 +62,10 @@ export default function Index({}: Props) {
               follow me on github
             </a>
           </div>
-
-          {/* <ul className="social_media">
-            <li>
-              Github :{" "}
-              <a href="https://github.com/Nouhack" target="_blank">
-                @nouhack
-              </a>
-            </li>
-            <li>
-              Email : <a href="">nouh.saiche@gmail.com</a>
-            </li>
-          </ul> */}
         </div>
         <h2>My Current status 🏴󠁧󠁢󠁮󠁩󠁲󠁿</h2>
         <p>
-          Currently i'am working at Hostaplast, a company specializing in
+          Currently i‘am working at Hostaplast, a company specializing in
           geolocation services. Throughout my time here, I have successfully
           completed multiple projects, leveraging my 5 years of development
           experience. I have a strong passion for helping others and sharing my
@@ -124,7 +109,7 @@ export default function Index({}: Props) {
                     {item.date}
                   </span>
                 </p>
-                <img
+                <Image
                   src="./arrow.svg"
                   width={15}
                   height={15}
