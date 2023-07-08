@@ -6,26 +6,15 @@ type Props = {};
 export default function Header({}: Props) {
   return (
     <ul className="header">
-      <li>
-        <Link
-          href="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <img src="favicon.ico" alt="" width={40} height={40} />
-        </Link>
-      </li>
-      <div>
+      <div style={{ gap: "1rem", display: "flex" }}>
         <li>
-          <Link href="/">About</Link>
+          <Link href="/">home</Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blog">blog</Link>
         </li>
         <li>
-          <Link href="/resume">Resume</Link>
+          <Link href="/guestbook">guestbook</Link>
         </li>
       </div>
     </ul>

@@ -7,32 +7,31 @@ body {
 .container {
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 8rem;
 }
 .header {
   list-style: none; /* Remove bullet points from the list */
   margin: 0;
   padding: 0;
   text-align: right;
-  font-size: 1.2rem;
-  margin-bottom: 5rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   align-items: center;
-  justify-content: space-between;
   display: flex;
   height: 3rem;
 }
 .header li {
   display: inline-block; /* Display list items horizontally */
-  margin-left: 20px; /* Add some spacing between list items */
 }
 .header li a {
-  color: inherit;
+  color: grey;
   text-decoration: none;
 }
 
 /* Home page (about the developer) */
 .dev_introduction {
-  color: rgb(59, 59, 59);
+  /* color: rgb(59, 59, 59); */
+  color: rgb(64, 64, 64);
 }
 .dev_introduction .nested_dev_introduction {
   font-weight: bolder;
@@ -40,6 +39,8 @@ body {
 .dev_contact_info {
   display: flex;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .personal_image {
   width: 7rem;

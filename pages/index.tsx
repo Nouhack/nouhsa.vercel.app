@@ -1,3 +1,5 @@
+import { fav_blogs } from "@/More/Fav_blog";
+import Skills_box from "@/components/skills_box";
 import { NextSeo } from "next-seo";
 
 import React from "react";
@@ -18,19 +20,53 @@ export default function Index({}: Props) {
           title,
         }}
       />
-      <main>
-        <h2>About me</h2>
-        <p className="dev_introduction">
-          Salam alikoum I&lsquo;am nouh ,
-          <span className="nested_dev_introduction">
-            Full Stack developer at Hostaplast
-          </span>
-          <br /> Where we offer geolocalization GPS solution.
-        </p>
-        <div className="dev_contact_info">
-          <img className="personal_image" src="./Dev.jpg" alt="" />
 
-          <ul className="social_media">
+      {/* <>
+          </> */}
+      <main>
+        <h2>hey, I'm Nouh 👋</h2>
+        <div className="dev_introduction">
+          I'am a self-taught developer with a Higher Technician degree in
+          database management systems. Experienced in
+          <Skills_box icon="./skills/react.svg" name="React js" />
+          ,
+          <Skills_box icon="./skills/mobile.svg" name="React Native" />,
+          <Skills_box icon="./skills/firebase.svg" name="Firebase" />,
+          <Skills_box icon="./skills/nextjs.svg" name="Next.js" />, and
+          <Skills_box icon="./skills/typescript.svg" name="Typescript" />.
+          <Skills_box icon="./skills/html.svg" name="HTML" />,
+          <Skills_box icon="./skills/css.svg" name="CSS" />,
+          <Skills_box icon="./skills/sass.svg" name="Sass" />,
+          <Skills_box icon="./skills/docker.svg" name="Docker" />,
+          <Skills_box icon="./skills/vim.svg" name="Vim" />,
+          <Skills_box icon="./skills/mongodb.svg" name="No SQL" />,
+          <Skills_box icon="./skills/sql.svg" name="Prisma ORM" />,
+          <Skills_box icon="./skills/express.svg" name="Express js" />,
+          <Skills_box icon="./skills/node.svg" name="Node js" />, and
+          <Skills_box icon="./skills/js.svg" name="Javascript" />. Passionate
+          about developing apps and software, eager to contribute skills and
+          collaborate with creative teams. Seeking opportunities to enhance
+          abilities and gain valuable experience.
+        </div>
+        <div className="dev_contact_info">
+          <div style={{ gap: "0.6rem", display: "flex", alignItems: "center" }}>
+            <img
+              src="./arrow.svg"
+              width={12}
+              height={12}
+              color="green"
+              alt="React Logo"
+            />
+            <a
+              href="https://github.com/Nouhack"
+              target="_blank"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              follow me on github
+            </a>
+          </div>
+
+          {/* <ul className="social_media">
             <li>
               Github :{" "}
               <a href="https://github.com/Nouhack" target="_blank">
@@ -40,7 +76,64 @@ export default function Index({}: Props) {
             <li>
               Email : <a href="">nouh.saiche@gmail.com</a>
             </li>
-          </ul>
+          </ul> */}
+        </div>
+        <h2>My Current status 🏴󠁧󠁢󠁮󠁩󠁲󠁿</h2>
+        <p>
+          Currently i'am working at Hostaplast, a company specializing in
+          geolocation services. Throughout my time here, I have successfully
+          completed multiple projects, leveraging my 5 years of development
+          experience. I have a strong passion for helping others and sharing my
+          knowledge, which is why I also write insightful blog articles to
+          contribute to the developer community.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+            marginBottom: "3rem",
+          }}
+        >
+          {fav_blogs.map((item, index) => {
+            return (
+              <a
+                href={"blog/" + item.slug}
+                key={index}
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  width: "100%",
+                  backgroundColor: "#FAFAFA",
+                  borderRadius: "3px",
+                  borderStyle: "solid",
+                  borderWidth: "2px",
+                  borderColor: "#E5E5E5",
+                  padding: "0.7rem",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p style={{ fontWeight: "bold" }}>
+                  {item.title}
+                  <br />
+                  <span style={{ fontSize: "14px", fontWeight: "normal" }}>
+                    {item.date}
+                  </span>
+                </p>
+                <img
+                  src="./arrow.svg"
+                  width={15}
+                  height={15}
+                  color="green"
+                  alt="React Logo"
+                />
+              </a>
+            );
+          })}
         </div>
       </main>
     </>
