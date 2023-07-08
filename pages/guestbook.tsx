@@ -8,7 +8,7 @@ type Props = {};
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
-export default function guestbook({}: Props) {
+export default function Guestbook({}: Props) {
   const { data, error, isLoading } = useSWR("/api/hello", fetcher);
   const { data: session, status } = useSession();
 
