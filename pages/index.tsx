@@ -23,13 +23,6 @@ export default function Index({}: Props) {
       />
       <main>
         <h2>hey, I‘m Nouh 👋</h2>
-        <button
-          onClick={() => {
-            console.log(process.env.DATABASE_URL);
-          }}
-        >
-          kkk
-        </button>
         <div className="dev_introduction">
           I‘am a self-taught developer with a Higher Technician degree in
           database management systems. Experienced in
