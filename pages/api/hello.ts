@@ -26,8 +26,7 @@ export default async function handler(
     //revalidatePath("/guestbook");
 
     res.status(200).json({ data: "success" });
-  }
-  if (req.method === "GET") {
+  } else {
     // Process a GET request
     const data = await queryBuilder
       .selectFrom("guestbook")
