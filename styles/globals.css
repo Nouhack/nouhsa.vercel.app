@@ -3,6 +3,8 @@ body {
   margin: 0px;
   font-family: sans-serif;
   line-height: 1.8rem;
+  background-color: #111010;
+  color:#CCCCCC; 
 }
 .container {
   max-width: 700px;
@@ -24,14 +26,13 @@ body {
   display: inline-block; /* Display list items horizontally */
 }
 .header li a {
-  color: grey;
+  color: white;
   text-decoration: none;
 }
 
 /* Home page (about the developer) */
 .dev_introduction {
-  /* color: rgb(59, 59, 59); */
-  color: rgb(64, 64, 64);
+ /* color: rgb(59, 59, 59); */
 }
 .dev_introduction .nested_dev_introduction {
   font-weight: bolder;
