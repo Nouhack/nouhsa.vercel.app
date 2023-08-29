@@ -70,12 +70,12 @@ export default function Index({ }: Props) {
                 </div>
                 <h2 style={{ color: 'white' }}>My Current status 🏴󠁧󠁢󠁮󠁩󠁲󠁿</h2>
                 <p className="dev_introduction">
-                    Currently i‘am working at Hostaplast, a company specializing in
-                    geolocation services. Throughout my time here, I have successfully
-                    completed multiple projects, leveraging my 5 years of development
-                    experience. I have a strong passion for helping others and sharing my
-                    knowledge, which is why I also write insightful blog articles to
-                    contribute to the developer community.
+                    Transitioning from my role at Hostaplast, a geolocation company, I'm eager to join ITComp – an Algerian IT service leader with 20+ years of experience, 500+ clients, and expertise in cutting-edge technologies. My 5 years of development experience and passion for knowledge-sharing, reflected in my blog articles, align perfectly with ITComp's commitment to advanced tech and client empowerment.
+
+
+
+
+
                 </p>
 
                 <div
