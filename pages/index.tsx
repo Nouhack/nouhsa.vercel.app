@@ -70,7 +70,7 @@ export default function Index({ }: Props) {
                 </div>
                 <h2 style={{ color: 'white' }}>My Current status 🏴󠁧󠁢󠁮󠁩󠁲󠁿</h2>
                 <p className="dev_introduction">
-                    Transitioning from my role at Hostaplast, a geolocation company, I'm eager to join ITComp – an Algerian IT service leader with 20+ years of experience, 500+ clients, and expertise in cutting-edge technologies. My 5 years of development experience and passion for knowledge-sharing, reflected in my blog articles, align perfectly with ITComp's commitment to advanced tech and client empowerment.
+                    Transitioning from my role at Hostaplast, a geolocation company, I&#39;m eager to join ITComp – an Algerian IT service leader with 20+ years of experience, 500+ clients, and expertise in cutting-edge technologies. My 5 years of development experience and passion for knowledge-sharing, reflected in my blog articles, align perfectly with ITComp&#39;s commitment to advanced tech and client empowerment.
 
 
 
