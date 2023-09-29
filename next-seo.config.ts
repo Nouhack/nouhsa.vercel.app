@@ -5,11 +5,11 @@ const description =
 export default {
   title,
   description,
-  canonical: "https://www.nouhsa.vercel.app",
+  canonical: "https://nouhsa.vercel.app",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://www.nouhsa.vercel.app",
+    url: "https://nouhsa.vercel.app",
     title,
     description,
     siteName: "Nouh saiche",
