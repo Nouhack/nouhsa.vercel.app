@@ -1,34 +1,19 @@
-## About project
-this is my personal portfolio created with [Next.js](https://nextjs.org/) and [chakra-ui](https://chakra-ui.com/docs/getting-started) for styling and it's responsive for all devices.
+# Getting started
 
-## visit the website
-
-[nouhsa.vercel.app](https://nouhsa.vercel.app)
-
-## Getting Started
-
-First, install all the dependecies:
-
-```bash
-npm install
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing pages by modifying `pages/index.js` , `pages/career.js` , `pages/projects.js`. The page auto-updates as you edit the file.
+welcome to my porfolio
 
 
-## Learn More
+# How to use this portfolio
 
-To learn more about Next.js, take a look at the following resources:
+Clone the repo and run `npm install`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# DONT FORGET 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+TO REMOVE MY PERSONAL INFORMATIONS
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
