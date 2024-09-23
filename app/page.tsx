@@ -10,7 +10,13 @@ export default function Page() {
                 I'm Senior developer and a Vim enthusiast, working at <a href="https://itcomp-dz.com/" target="_blank">ITComp</a> as a full-stack developer.
                 <br/>
                 <br/>
-                “ If, at first, you do not succeed, call it version 1.0. ― Khayri R.R. Woulfe ”
+                Currently i'm working on a Lis (Laboratory information system) software... 
+                <br/>
+                <br/>
+            <strong>
+                “ It's good to be smart, but it's smart to be wise. ”
+                    </strong>
+                
             </p>
             <div className="my-8">
                 <BlogPosts />
