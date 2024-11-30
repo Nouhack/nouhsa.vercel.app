@@ -1,0 +1,81 @@
+---
+title: "Cheat.sh : Your Ultimate Terminal Documentation Tool"
+publishedAt: "2024-04-22"
+image: "/images/gallery/cheat_bg.png"
+summary: "Cheat.sh revolutionizes documentation access by providing instant, terminal-based access to a wide range of programming languages, commands, and tools. it simplifies the search process. Say goodbye to browser tabs and hello to streamlined documentation with Cheat.sh!"
+
+tag: "Technology"
+---
+
+Are you tired of switching between multiple tabs in your browser just to find that one command or code snippet you need? Look no further! Cheat.sh is here to revolutionize the way you access documentation right from your terminal.
+
+## What is Cheat.sh?
+
+Cheat.sh is a powerful command-line tool that provides instant access to documentation for various programming languages, commands, and tools. Whether you're a seasoned developer or a beginner, Cheat.sh has got you covered with its vast repository of cheatsheets, examples, and explanations.
+
+## Features
+
+- **Instant Access** - Forget about navigating through complex documentation websites. With Cheat.sh, you can quickly find what you need by simply typing a command in your terminal.
+- **Comprehensive Coverage** - Cheat.sh supports a wide range of programming languages, frameworks, and tools, making it a one-stop solution for all your documentation needs.
+- **Ofline mode** - Access documentation without an internet connection.(optional)
+
+## How to use Cheat.sh?
+
+Using Cheat.sh is simple as typing a command in your terminal. Simply type the command you want to search for:
+
+```bash
+curl cheat.sh/python/parse+json
+```
+
+This command will fetch a cheatsheet for parsing JSON in Python and display it right in your terminal. You can replace python/parse+json with any other topic you want to learn about.
+
+## Offline Installation
+
+To use cheat.sh offline, you need to:
+
+1. Install cheat.sh.
+2. Fetch its data sources.
+
+If you already have the cht.sh cli client locally, you can use it for the standalone installation. Otherwise it must be installed first.
+
+<CodeBlock
+  className="my-24"
+  compact
+  codeInstances={[
+    {
+      code: "curl https://cht.sh/:cht.sh > ~/bin/cht.sh\nchmod +x ~/bin/cht.sh",
+      label: "Next.js",
+      language: "bash",
+    },
+  ]}
+  copyButton
+/>
+Now you can install cheat.sh locally:
+
+```bash
+cht.sh --standalone-install
+```
+
+<CodeBlock
+  className="my-24"
+  compact
+  codeInstances={[
+    {
+      code: "cht.sh --standalone-install",
+      label: "Next.js",
+      language: "bash",
+    },
+  ]}
+  copyButton
+/>
+During the installation process, cheat.sh and its data sources will be installed
+locally.
+
+By default `~/.cheat.sh` is used as the installation
+directory.
+
+![cheat.sh standalone installation](/images/gallery/cheat.png)
+
+## Conclusion
+
+With Cheat.sh, accessing documentation has never been easier. Say goodbye to endless browser tabs and hello to streamlined, terminal-based documentation. Install Cheat.sh today and supercharge your development workflow!

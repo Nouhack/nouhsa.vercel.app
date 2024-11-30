@@ -1,0 +1,139 @@
+---
+title: "AkramCSS UI Component Library"
+publishedAt: "2024-04-08"
+summary: "UI component library for faster development with customizable components."
+images:
+  - "/images/projects/project-02/akramcss.png"
+team:
+  - name: "Nouh Saiche"
+    role: "Software Engineer / Mobile Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+---
+
+## Overview
+
+**AkramCSS** is a lightweight, customizable CSS component library designed to help developers build modern and responsive user interfaces quickly and efficiently. The library offers a comprehensive set of reusable components and utilities, focusing on simplicity, accessibility, and performance.
+
+## Key Features
+
+- **Predefined Components**: Includes a variety of ready-to-use components like buttons, modals, cards, grids, and navigation bars, all styled for modern design trends.
+- **Customizability**: Built with flexibility in mind, AkramCSS allows developers to override styles easily and adapt the components to match their brand identity.
+- **Utility Classes**: Packed with utility classes for spacing, typography, colors, and layout to streamline the development process.
+- **Responsive Design**: Provides built-in responsiveness, ensuring components look great on all screen sizes.
+- **Minimal Dependencies**: Pure CSS implementation with minimal reliance on JavaScript, making it lightweight and fast-loading.
+
+## Technologies Used
+
+- **CSS/SASS**: For styling the components with modular and maintainable code.
+- **PostCSS**: For compiling and optimizing CSS for production.
+- **NPM**: To distribute the library and manage dependencies.
+
+## Challenges and Learnings
+
+- **Consistency vs. Flexibility**: Striking the right balance between providing flexible components and maintaining design consistency across projects.
+- **Performance Optimization**: Ensured the library remains lightweight while including essential features for modern UI development.
+- **Accessibility**: Focused on building components with accessibility in mind, adhering to ARIA guidelines and WCAG standards.
+
+## Outcome
+
+AkramCSS has become a go-to solution for developers looking for a fast and flexible way to create professional user interfaces. By providing a robust foundation, the library has helped teams reduce development time and maintain design consistency across projects.
+
+## Get Started
+
+### From CDN :
+
+The easiest way to try AkramCSS is from our cdn but we do not encourage you to use cdn in production:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code:` 
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      
+      <!--responsive viewport meta tag-->
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <title>Example</title>
+      
+      <!--Akram CSS CDN-->
+      <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/@nouhsa/akramcss/css/akramcss.min.css">
+      
+   </head>
+   
+   <body>
+      <section class = "dark-mode">
+         <div class = "bg-akram display-flex">
+            <span class = "text-inner">
+               Hello World... AkramCSS is Awesome !!!
+            </span>
+         </div>
+      </section>
+  </body>
+</html>`
+
+            ,
+            label: 'Next.js',
+            language: 'html'
+        },
+    ]}
+    copyButton
+
+/>
+
+## Package manager
+
+1. **Install AkramCSS**:
+
+<CodeBlock
+  className="my-24"
+  compact
+  codeInstances={[
+    {
+      code: "npm install @nouhsa/akramcss",
+      label: "Next.js",
+      language: "bash",
+    },
+  ]}
+  copyButton
+/>
+
+2. **Import AkramCSS.min.css**:
+
+<CodeBlock
+  className="my-24"
+  compact
+  codeInstances={[
+    {
+      code: '@import "../node_modules/@nouhsa/akramcss/css/akramcss.min.css',
+      label: "SCSS",
+      language: "css",
+    },
+  ]}
+  copyButton
+/>
+
+3. **How to use it**:
+
+<CodeBlock
+  className="my-24"
+  compact
+  codeInstances={[
+    {
+      code: `
+   <div class="bg-primary">
+     <div class="w-90-100 bg-akram font-bold text-base p-2 rounded-lg ls-wider" />
+     <div class="w-90-100 bg-akram font-bold text-base p-2 rounded-lg ls-wider" />
+   </div>
+      `,
+      label: 'Next.js',
+      language: "JSX",
+    },
+
+]}
+copyButton
+/>
