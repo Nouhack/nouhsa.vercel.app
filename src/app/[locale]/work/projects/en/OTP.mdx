@@ -1,0 +1,37 @@
+---
+title: "OTP (One-Time Password)"
+publishedAt: "2024-04-01"
+summary: "Implemented OTP system for secure login and verification."
+images:
+  - "/images/projects/project-06/otp.jpg"
+team:
+  - name: "Nouh Saiche"
+    role: "Software Engineer / Fullstack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+---
+
+## Overview
+
+**OTP (One-Time Password)** is a secure authentication system designed to enhance login and verification processes. This solution leverages a Raspberry Pi Model B as an embedded system, where the entire OTP service runs directly from the device. Upon plugging in the Raspberry Pi, the API web service starts automatically, allowing for immediate OTP generation and validation. The generated OTP codes are stored in a **PostgreSQL** database to ensure persistence and to allow for easy retrieval during the verification process. This system provides a reliable and efficient method for two-factor authentication without requiring additional external devices or complex infrastructure.
+
+## Key Features
+
+- **Secure Authentication**: Implements OTP generation and validation to ensure secure user login and access.
+- **Embedded System**: The solution is entirely embedded in a Raspberry Pi Model B, providing a compact and portable solution for OTP generation and verification.
+- **Automatic Service Start**: Upon powering the Raspberry Pi, the OTP web service API starts automatically, providing a plug-and-play experience.
+- **Web API**: A FastAPI-based web service allows interaction with the OTP system for seamless integration with external systems or applications.
+- **PostgreSQL Storage**: OTP codes are securely stored in a **PostgreSQL** database, allowing for persistent storage and easy management of generated OTPs.
+- **Customizable OTP Configuration**: Supports custom configurations for OTP generation, including expiration times, token length, and more.
+
+## Technologies Used
+
+- **Python**: Used as the main programming language for the OTP service and backend logic.
+- **FastAPI**: A modern web framework for building the API that handles OTP requests and responses efficiently.
+- **Raspberry Pi Model B**: A compact, affordable embedded system for hosting the OTP service.
+- **PostgreSQL**: A reliable database for securely storing the generated OTP codes.
+- **Uptime and Reliability**: The solution ensures the OTP system is always available when plugged into a device, offering reliability and convenience.
+
+## Outcome
+
+The OTP solution offers a simple yet secure method for user verification, with the added benefit of being embedded in a portable Raspberry Pi device. By storing the generated OTP codes in PostgreSQL, the system ensures persistence, reliability, and quick access for verification. The solution simplifies two-factor authentication in environments where security is paramount but external devices or complex systems are not feasible. With automatic startup and seamless web API interaction, the OTP system has become an easy-to-deploy security feature for any application or system requiring enhanced login protection.
